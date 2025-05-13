@@ -1,0 +1,18 @@
+{
+  "family": "flask-ecs-fargate-task",
+  "containerDefinitions": [
+    {
+      "name": "flask-app",
+      "image": "545009860442.dkr.ecr.ap-south-1.amazonaws.com/flask-ecs-fargate-repo:latest",
+      "memory": 512,
+      "cpu": 256,
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 5000,
+          "hostPort": 5000
+        }
+      ]
+    }
+  ]
+}
